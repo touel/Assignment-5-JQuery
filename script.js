@@ -1,12 +1,11 @@
 var today = dayjs();
-$('#currentDay').text(today.format('MMM D, YYYY'));
 var time = new Date();
 var hours = time.getHours();
 var saveButton = document.getElementById("save");
 var taskInput = document.querySelector("#description");
 
 console.log (hours);
-timeColors();
+
 
 function timeColors() {
     var timeSlot = document.querySelectorAll(".future");
@@ -34,25 +33,35 @@ function timeColors() {
 }}
 
 
+function saveLastTasks() {
+    var tasks = {
+        
+    }
+}
 
 function renderLastTasks() {
-    var task = localStorage.getItem("#description");
+    var lastTasks = JSON.parse(localStorage.getItem("#description"));
 
-    if (!task)
+    if (lastTasks !== null){
+
+    } else {
     return;
+    }
 
     task.textContent = task;
     
 };
 
-saveButton.addEventListener("click", function(event){
-    event.preventDefault();
+document.addEventListener("click", function(event){
+event.preventDefault();
   saveLastTasks();  
   renderLastTasks();
 })
 
 function init() {
     renderLastTasks();
+    timeColors();
+    $('#currentDay').text(today.format('MMM D, YYYY'));
 }
 
 init();

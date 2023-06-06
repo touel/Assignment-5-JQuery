@@ -3,7 +3,7 @@ $('#currentDay').text(today.format('MMM D, YYYY'));
 var time = new Date();
 var hours = time.getHours();
 var saveButton = document.getElementById("save");
-var task = document.querySelector("#description");
+var taskInput = document.querySelector("#description");
 
 console.log (hours);
 timeColors();
@@ -36,10 +36,23 @@ function timeColors() {
 
 
 function renderLastTasks() {
+    var task = localStorage.getItem("#description");
+
+    if (!task)
+    return;
+
+    task.textContent = task;
+    
 };
 
 saveButton.addEventListener("click", function(event){
     event.preventDefault();
-
-
+  saveLastTasks();  
+  renderLastTasks();
 })
+
+function init() {
+    renderLastTasks();
+}
+
+init();

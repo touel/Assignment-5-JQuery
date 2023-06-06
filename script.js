@@ -29,9 +29,10 @@ function timeColors() {
 	  console.log('timeSlots: ', timeSlotArr[i]);
       if (idTime < hours) {
         console.log ('yes');
-        document.getElementById('9').className = "row time-block past";
+        document.getElementById(idTime).className = "row time-block past";
       } else if (idTime == hours) {
         console.log ('maybe');
+        document.getElementById(idTime).className = "row time-block present"
       }
       else {
         console.log ('no')

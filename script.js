@@ -10,16 +10,27 @@ timeColors();
 
 function timeColors() {
     var timeSlot = document.querySelectorAll(".future");
-    var idTime = timeSlot.id
+    var timeSlotArr = Array.from(timeSlot);
+    var idTime = timeSlotArr.id
+    var timeNumber = Number(idTime)
 
     console.log (idTime);
+    console.log (timeSlotArr);
 
-	for (var i = 0; i < timeSlot.length; i++) {
-        console.log (idTime);
-	  console.log('timeSlots: ', timeSlot[i]);
-      if (idTime > hours) {
+	for (var i = 0; i < timeSlot.length; i++) 
+    {
+        var idTime = timeSlotArr[i].id;
+        var timeNumber = Number(idTime);
+        var classChange = $(this).attr("class");
+        /*
+        console.log (classChange);
+        console.log (timeNumber);
+        console.log (idTime);*/
+	  console.log('timeSlots: ', timeSlotArr[i]);
+      if (idTime < hours) {
         console.log ('yes');
-      } else if (idTime = hours) {
+        document.getElementById('9').className = "row time-block past";
+      } else if (idTime == hours) {
         console.log ('maybe');
       }
       else {

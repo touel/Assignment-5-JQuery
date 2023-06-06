@@ -12,7 +12,6 @@ function timeColors() {
     var timeSlot = document.querySelectorAll(".future");
     var timeSlotArr = Array.from(timeSlot);
     var idTime = timeSlotArr.id
-    var timeNumber = Number(idTime)
 
     console.log (idTime);
     console.log (timeSlotArr);
@@ -20,12 +19,7 @@ function timeColors() {
 	for (var i = 0; i < timeSlot.length; i++) 
     {
         var idTime = timeSlotArr[i].id;
-        var timeNumber = Number(idTime);
-        var classChange = $(this).attr("class");
-        /*
-        console.log (classChange);
-        console.log (timeNumber);
-        console.log (idTime);*/
+
 	  console.log('timeSlots: ', timeSlotArr[i]);
       if (idTime < hours) {
         console.log ('yes');
@@ -37,28 +31,10 @@ function timeColors() {
       else {
         console.log ('no')
       }
-
 }}
-    /*
-    var i = 1;
-    if (!document.getElementById("hours-" + i))
-    return;
-    if (i < hours)
-    document.getElementById("hours-" + i).classList.add("past");
-    i++;
-    }*/
-    
 
-   /* var timeSlot = document.body.id.getElementsByTagName('ID');
-    console.log(timeSlot);*/
-    /*if (isNan(timeSlot)){
-        console.log("it is a number")
-    } 
-    else {
-        console.log("Not a Number")*/
-    
 
-/*
+
 function renderLastTasks() {
 };
 
@@ -66,4 +42,4 @@ saveButton.addEventListener("click", function(event){
     event.preventDefault();
 
 
-})*/
+})

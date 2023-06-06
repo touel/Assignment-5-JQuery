@@ -13,7 +13,7 @@ N/A
 
 ## Usage
 
-To apply the use of this site and project enter your daily work tasks into the scheduled timeblocks. Refresh or revisit the page to ensure tasks are being saved in local storage. As the timeblocks pass the past times will be red, current time will be grey, and the future times will be green.
+To apply the use of this site and project enter your daily work tasks into the scheduled timeblocks. Refresh or revisit the page to ensure tasks are being saved in local storage. As the timeblocks pass the past times will be grey, current time will be red, and the future times will be green.
 
 ## Credits
 
